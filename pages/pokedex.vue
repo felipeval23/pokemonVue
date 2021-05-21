@@ -10,7 +10,7 @@
           <p>
             Name :
             {{
-              pokemonMostrar.charAt(0).toUpperCase() + pokemonMostrar.slice(1)
+              capitalizar(pokemonMostrar)
             }}
           </p>
           <p>Type : {{ type }}</p>
@@ -68,7 +68,7 @@
           >
             <v-list-item-content @click="mostrar(sub.name)">
               <v-list-item-title
-                v-text="sub.name.charAt(0).toUpperCase() + sub.name.slice(1)"
+                v-text="capitalizar(sub.name)"
               ></v-list-item-title>
             </v-list-item-content>
             <v-list-item-action>
@@ -87,12 +87,12 @@
           <v-list-item id="lista" v-for="item in favoritos" :key="item">
             <v-list-item-content @click="mostrar(item)">
               <v-list-item-title
-                v-text="item.charAt(0).toUpperCase() + item.slice(1)"
+                v-text="capitalizar(item)"
               ></v-list-item-title>
             </v-list-item-content>
 
             <v-list-item-action>
-              <v-icon :color="colores" @click="favorito(event)">
+              <v-icon :color="colores" @click="favorito(item)">
                 {{ icono }}
               </v-icon>
             </v-list-item-action>
@@ -186,6 +186,9 @@ export default {
       alert('Error al copiar datos del Pokemon')
     },
 
+capitalizar(item){
+return item.charAt(0).toUpperCase() + item.slice(1)
+},
     favorito(pokemon) {
       console.log(pokemon)
       if (this.colores == 'grey lighten-1') {
@@ -263,11 +266,6 @@ export default {
   created: async function () {
     this.cargando = true
     setTimeout(() => this.mostrarPok(), 3000)
-
-    const responder = await this.$axios.$get(
-      'https://pokeapi.co/api/v2/pokemon'
-    )
-    console.log(responder)
   },
 
   computed: {
