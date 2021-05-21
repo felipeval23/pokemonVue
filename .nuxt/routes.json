@@ -1,0 +1,26 @@
+[
+  {
+    "name": "calendary",
+    "path": "/calendary",
+    "component": "D:\\\\ABI\\\\test-fullstack-felipe_burbano-master\\\\pages\\\\calendary.vue",
+    "chunkName": "pages/calendary"
+  },
+  {
+    "name": "pokedex",
+    "path": "/pokedex",
+    "component": "D:\\\\ABI\\\\test-fullstack-felipe_burbano-master\\\\pages\\\\pokedex.vue",
+    "chunkName": "pages/pokedex"
+  },
+  {
+    "name": "welcome",
+    "path": "/welcome",
+    "component": "D:\\\\ABI\\\\test-fullstack-felipe_burbano-master\\\\pages\\\\welcome.vue",
+    "chunkName": "pages/welcome"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "D:\\\\ABI\\\\test-fullstack-felipe_burbano-master\\\\pages\\\\index.vue",
+    "chunkName": "pages/index"
+  }
+]
