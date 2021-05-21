@@ -10,3 +10,8 @@ Pese a que Vuetify contiene sus propias clases en los diferentes controles, defi
 Las clases estan organizadas alfabeticamente para facilitar su ubicación.
 
 Para el manejo de la información, se ha hecho la carga de los datos traidos de la Api directamente a la Store de Vue, con el objetivo de  hacer la aplicacion escalable en el manejo de la misma en caso de incrementar los detalles a mostrar.
+
+Instalar con: 
+yarn install
+yarn generate
+correr con yarn dev
